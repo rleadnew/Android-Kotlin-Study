@@ -12,12 +12,12 @@ class ResultActivity: AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        val height = intent.getIntExtra("height", 0)
-        val weight = intent.getIntExtra("weight", 0)
+        val height = intent.getIntExtra("height", 0) // intent로 얻은 신장값을 받는 방법 + 신장값이 없을 경우 값(디폴트값)은 0
+        val weight = intent.getIntExtra("weight", 0) // intent로 얻은 신장값을 받는 방법 + 신장값이 없을 경우 값(디폴트값)은 0
 
-        Log.d("ResultActivity", "height : $height , weight : $weight")
+        Log.d("ResultActivity", "height : $height , weight : $weight") //값이 잘 들어왓는지 확인하는 디버그 방법
 
-        val bmi = weight / (height / 100.0).pow(2.0)
+        val bmi = weight / (height / 100.0).pow(2.0) // bmi 공식에 맞게 결과값 출력
         val resultText = when {
             bmi >= 35.0 -> "고도 비만"
             bmi >= 30.0 -> "중정도 비만"
