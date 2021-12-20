@@ -4,7 +4,7 @@ import com.example.edu.Person as User
 
 fun main(){
     val user1 = User("Kildong", 30) // com.example.edu의 Person이 User로 대체
-    val user2 = Person("A123", "Kildong") // 이 파일 안에 있는 Person 클래스의 객체 생성
+    val user2 = Person("A123", "Kildong") // 이 파일 안에 있는 Person 클래스의 객체 생성 
 
     println(user1.name)
     println(user1.age)
