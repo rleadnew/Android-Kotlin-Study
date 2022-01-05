@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setNumberBackround(number:Int, textView: TextView) {
+    private fun setNumberBackround(number:Int, textView: TextView) {#숫자범위에 따라 색이 다르게 표현
         when(number) {
             in 1..10 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_yellow)
             in 11..20 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_blue)
